@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Run</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 class="title">Dino Run</h1>
+
+    <div id="canvas" class="canvas ready">
+      <!-- background scenery -->
+      <div class="moon"></div>
+      <div class="stars"></div>
+      <div class="cloud" style="top:22px;--t:40s;--d:-10s"></div>
+      <div class="cloud" style="top:58px;--t:55s;--d:-38s"></div>
+      <div class="cloud" style="top:10px;--t:48s;--d:-26s"></div>
+      <div class="bird" style="top:34px;--t:14s;--d:-4s"></div>
+      <div class="bird" style="top:64px;--t:20s;--d:-15s"></div>
+
+      <!-- HUD -->
+      <div class="score"><span id="hiElement" class="hi">HI 00000</span><span id="scoreElement">00000</span></div>
+      <div class="gameover">GAME OVER</div>
+      <button type="button" id="start" class="start" tabindex="-1" aria-label="Play">
+        <span class="icon-play"></span>
+        <svg class="icon-restart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
+          <path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 3v6h-6" stroke-linejoin="miter"/>
+        </svg>
+      </button>
+
+      <!-- game objects -->
+      <svg id="dinoElement" class="dino" viewBox="0 0 22 24" width="44" height="48" shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+        <rect x="10" y="0" width="11" height="8"/>
+        <rect class="eye" x="13" y="1" width="2" height="2"/>
+        <rect x="9" y="8" width="7" height="3"/>
+        <rect x="4" y="10" width="12" height="8"/>
+        <rect x="0" y="8" width="3" height="3"/>
+        <rect x="2" y="10" width="3" height="3"/>
+        <rect x="16" y="12" width="3" height="2"/>
+        <g class="ls"><rect x="6" y="18" width="3" height="6"/><rect x="12" y="18" width="3" height="6"/></g>
+        <g class="la"><rect x="6" y="18" width="3" height="6"/><rect x="12" y="18" width="3" height="3"/></g>
+        <g class="lb"><rect x="6" y="18" width="3" height="3"/><rect x="12" y="18" width="3" height="6"/></g>
+      </svg>
+      <div id="cactusElement1" class="cactus"></div>
+      <div id="cactusElement2" class="cactus"></div>
+      <div class="ground"></div>
+    </div>
+
+    <p class="hint">Space / ↑ / tap to jump</p>
+    <script src="logic.js"></script>
+  </body>
+</html>
